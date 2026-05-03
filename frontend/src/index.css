@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cricket-green: #2ecc71;
+  --color-cricket-dark: #1a202c;
+  --color-cricket-light: #f7fafc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-cricket-dark);
+  color: var(--color-cricket-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar for clean app-like feel */
+::-webkit-scrollbar {
+  display: none;
+}
