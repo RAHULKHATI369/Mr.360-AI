@@ -3,7 +3,8 @@ export const processFrame = async (blob, featureType) => {
   formData.append('frame', blob, 'frame.jpg');
   formData.append('feature_type', featureType);
 
-  const response = await fetch('http://localhost:8080/process-360', {
+  const baseUrl = window.location.hostname === 'localhost' ? 'http://localhost:8080' : '';
+  const response = await fetch(`${baseUrl}/process-360`, {
     method: 'POST',
     body: formData,
   });
